@@ -72,8 +72,8 @@ function readTifLayers(url, name, info, showInfo) {
     fetch(url).then(r => r.arrayBuffer()).then((buffer) => {
         let s = new L.ScalarField.fromGeoTIFF(buffer);
         let tifLayer = new L.canvasLayer.scalarField(s, {
-            range: s.range,
-            color: "#eee",
+            range: s.range, 
+            color: chroma.scale(info.scale).domain(s.range).classes(30),
             opacity: 0.85
         });
 
