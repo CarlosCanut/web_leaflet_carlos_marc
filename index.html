@@ -1,55 +1,221 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-  <meta charset="utf-8" />
-  <title>Esri Leaflet Quickstart</title>
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Precipitaciones</title>
 
-  <!-- Load Leaflet from CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  <!-- Scripts -->
+  <script src="js/pace.min.js"></script>
+  <link rel="stylesheet" href="css/loading.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://npmcdn.com/geotiff@0.3.6/dist/geotiff.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.0/chroma.min.js"></script>
+  <script src="https://npmcdn.com/leaflet@1.6.0/dist/leaflet.js"></script>
+  <script src="https://d3js.org/d3-request.v1.min.js"></script>
+
+  <link rel="stylesheet" href="./plugins/styledLayerControl/styledLayerControl.css" />
+  <script src="./plugins/styledLayerControl/styledLayerControl.js"></script>
+
+  <script src="./plugins/pnoa/Leaflet.Spain.WMS.js"></script>
+  <script src="./plugins/pnoa/leaflet.wms.js"></script>
+
+  <script src="https://unpkg.com/esri-leaflet@2.3.2/dist/esri-leaflet.js"
+    integrity="sha512-6LVib9wGnqVKIClCduEwsCub7iauLXpwrd5njR2J507m3A2a4HXJDLMiSZzjcksag3UluIfuW1KzuWVI5n/cuQ=="
     crossorigin=""></script>
 
-  <!-- Load Esri Leaflet from CDN -->
-  <script src="https://unpkg.com/esri-leaflet@2.5.3/dist/esri-leaflet.js"
-    integrity="sha512-K0Vddb4QdnVOAuPJBHkgrua+/A9Moyv8AQEWi0xndQ+fqbRfAFd47z4A9u1AW/spLO0gEaiE1z98PK1gl5mC5Q=="
+  <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.css"
+    integrity="sha512-IM3Hs+feyi40yZhDH6kV8vQMg4Fh20s9OzInIIAc4nx7aMYMfo+IenRUekoYsHZqGkREUgx0VvlEsgm7nCDW9g=="
+    crossorigin="">
+  <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.2/dist/esri-leaflet-geocoder.js"
+    integrity="sha512-8twnXcrOGP3WfMvjB0jS5pNigFuIWj4ALwWEgxhZ+mxvjF5/FBPVd5uAxqT8dd2kUmTVK9+yQJ4CmTmSg/sXAQ=="
     crossorigin=""></script>
-  
-  <!-- Load Spain Esri Leaflet   -->
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-  <script src="https://sigdeletras.github.io/Leaflet.Spain.WMS/src/Leaflet.Spain.WMS.js"></script>
 
-  <style>
-    body { margin:0; padding:0; }
-    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
-  </style>
+  <script src="./plugins/shp/leaflet.shpfile.js"></script>
+  <script src="./plugins/shp/shp.min.js"></script>
+  <script src="./plugins/shp/leaflet-providers.js"></script>
+
+  <script src="./plugins/canvaslayer/leaflet.canvaslayer.field.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./plugins/zoomhome/leaflet.zoomhome.css" />
+  <script src="./plugins/zoomhome/leaflet.zoomhome.min.js"></script>
+  <link rel="stylesheet" href="https://ljagis.github.io/leaflet-measure/leaflet-measure.css">
+  <script src="./plugins/leaflet-measure/leaflet-measure.js"></script>
+
+  <link rel="stylesheet" href="./plugins/minimap/Control.MiniMap.min.css">
+  <script src="./plugins/minimap/Control.MiniMap.min.js"></script>
+  <script src="./plugins/easyprint/bundle.min.js"></script>
+
+  <script src="./plugins/kml/L.KML.min.js"></script>
 </head>
+
 <body>
 
-<div id="map"></div>
+  <div class="wrapper">
 
+    <!-- Sidebar -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <h3>Tecnologías de la Información Geográfica</h3>
+      </div>
+      <ul class="list-unstyled components">
+        <h4>Elaboración de un visor SIG</h4>
+        <h4>Realizado por:</h4>
+        <h5>
+          <p style="text-align: center;"><b>Carlos Canut</b> - <b>Marc Oller Caballé</b> </p>
+        </h5>
+        <p class="text-justify">
+          En la siguiente web se podrán visualizar mapas de interés general, tanto de las practicas realizadas en la
+          asignatura de GTI como en otros grados...<br></p>
+        <hr>
+        <hr>
+          <h6 style="text-align: center; font-style: italic;"><b>Como seleccionar capas</b></h6>
+          <hb>
+            <img src="./media/layerselection.gif" alt="HowToLayer" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+        </p>
+    </nav>
+
+    <!-- Page Content -->
+    <div id="content" class="sidebarCollapse">
+      <div class="content" id="map" style="width: 100%; height: 100vh;">
+      </div>
+    </div>
+  </div>
+
+  <button type="button" id="sidebarCollapse" class="btn btn-info">
+    <span>Mostrar información</span>
+  </button>
+</body>
+<script src="./js/map.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/layers.js"></script>
 <script>
-var map = L.map('map', {
-		zoomControl:true, 
-		maxZoom:20,
-		layers:[Spain_UnidadAdministrativa,Spain_PNOA_Ortoimagen]
-	}).fitBounds([[24.9300000311,-19.6],[46.0700000311,5.6]]);
-	
-	var baselayers = {
-		"PNOA Mosaico": Spain_PNOA_Mosaico,
-		"PNOA Máx. Actualidad": Spain_PNOA_Ortoimagen,
-		"PNOA 2010": Spain_PNOA_2010
-	};
+  // Inicializamos mapa
+  initMap();
 
-	var overlayers = {
-		"Unidades administrativas": Spain_UnidadAdministrativa
-	};
-	
-	L.control.layers(baselayers, overlayers,{collapsed:false}).addTo(map);
+  // Archivos tif y shp
+  const layers = [
+    {
+      name: "Waypoints",
+      url: "./layers/kml/puntoInteres.kml",
+      info: layerGroups.waypoints,
+      popup: true
+    },
+    {
+      name: "Riesgo de inundaciones Valencia",
+      url: "./layers/shp/patricova.zip",
+      info: layerGroups.patricova,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Enero",
+      url: "./layers/tif/enero1.tif",
+      info: layerGroups.rain,
+      popup: true
+    }/*,
+    {
+      name: "Precipitaciones Febrero",
+      url: "./layers/tif/febrero.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Marzo",
+      url: "./layers/tif/marzo.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Abril",
+      url: "./layers/tif/abril.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Mayo",
+      url: "./layers/tif/mayo.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Junio",
+      url: "./layers/tif/junio.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Julio",
+      url: "./layers/tif/julio.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Agosto",
+      url: "./layers/tif/agosto.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Septiembre",
+      url: "./layers/tif/septiembre.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Octubre",
+      url: "./layers/tif/octubre.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Noviembre",
+      url: "./layers/tif/noviembre.tif",
+      info: layerGroups.rain,
+      popup: true
+    },
+    {
+      name: "Precipitaciones Diciembre",
+      url: "./layers/tif/diciembre.tif",
+      info: layerGroups.rain,
+      popup: true
+    }*/
+  ]
+
+  // Recorremos los archivos y cargamos las capas
+  for (let i = 0; i < layers.length; i++) {
+    // Cargamos SHPs
+    if (getFileExtension(layers[i].url) == "zip") {
+      readShapeLayers(layers[i].url, layers[i].name, layers[i].info, layers[i].popup);
+    }
+
+    // Cargamos TIFs
+    if (getFileExtension(layers[i].url) == "tif") {
+      readTifLayers(layers[i].url, layers[i].name, layers[i].info, layers[i].popup);
+    }
+
+    if (getFileExtension(layers[i].url) == "kml") {
+      readKmlLayer(layers[i].url, layers[i].name, layers[i].info);
+    }
+  }
 </script>
 
-</body>
 </html>

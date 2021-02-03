@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Carlos Canut</name>
+	<open>1</open>
+	<snippet>Created ma. oct. 20 13:07:08 2020</snippet>
+	<LookAt>
+		<gx:TimeSpan>
+			<begin>2018-10-04T14:50:43Z</begin>
+			<end>2018-10-04T15:06:02Z</end>
+		</gx:TimeSpan>
+		<longitude>-0.16038</longitude>
+		<latitude>38.996197</latitude>
+		<altitude>0</altitude>
+		<heading>0</heading>
+		<tilt>0</tilt>
+		<range>1300</range>
+	</LookAt>
+	<Style id="sn_homegardenbusiness">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/homegardenbusiness.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffaa</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="sn_play">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/play.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_heliport">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/heliport.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sh_play">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/play.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sh_homegardenbusiness">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/homegardenbusiness.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00ffaa</color>
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="msn_homegardenbusiness">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_homegardenbusiness</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_homegardenbusiness</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_play">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_play</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_play</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_heliport">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_heliport</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_heliport</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_heliport">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/heliport.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Folder>
+		<name>Waypoints</name>
+		<open>1</open>
+		<Placemark>
+			<name>Hotel</name>
+			<description><![CDATA[<big><b>HOTEL ALBATROS</b></big>
+<p>
+<p>
+<small>Esto es un hotel</small>
+<p>
+<a href="https://hotel-albatros.com/new/">https://hotel-albatros.com/new/</a>
+<p>
+<img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/17/a3/a5/bb/hotel-albatros.jpg" widht="60%" height="60%" layout_gravity="center">
+<p>
+<iframe src="https://www.google.com/maps/embed?pb=!4v1603192649187!6m8!1m7!1sOZHGR-6a86DkbM8j_39ewg!2m2!1d38.99720586559911!2d-0.1615106483993752!3f242.3559176854007!4f17.23729440210745!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>]]></description>
+			<TimeStamp><when>2018-10-04T14:50:43Z</when>
+</TimeStamp>
+			<styleUrl>#msn_homegardenbusiness</styleUrl>
+			<Point>
+				<coordinates>-0.161655,38.997193,-4.18</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hotel</name>
+			<description><![CDATA[<big><b>HOTEL BIARRITZ</b></big>
+<p>
+<p>
+<small>Esto es un hotel.</small>
+<p>
+<a href="https://www.booking.com/searchresults.es.html?aid=311090;label=hotel-13025-es-MU8tBt6%2Asq5wCkeuZnMxzAS388534731281%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-261710242702%3Akwd-960544496%3Alp1005542%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pawEozW2KQ80;sid=33e9932ce86728b652f19c46fef9abdc;city=-383645;expand_sb=1;highlighted_hotels=13025;hlrd=no_dates;keep_landing=1;redirected=1;source=hotel&gclid=CjwKCAjwlbr8BRA0EiwAnt4MTqfNj-_xTHZTJtJz0fV3ILq15mDxllmU3gpPm09F-EIUx45k1y2afBoCrvYQAvD_BwE&room1=A,A,;">https://www.booking.com/searchresults.es.html?aid=311090;label=hotel-13025-es-MU8tBt6%2Asq5wCkeuZnMxzAS388534731281%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atiaud-261710242702%3Akwd-960544496%3Alp1005542%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YcGt_tphEo8pawEozW2KQ80;sid=33e9932ce86728b652f19c46fef9abdc;city=-383645;expand_sb=1;highlighted_hotels=13025;hlrd=no_dates;keep_landing=1;redirected=1;source=hotel&gclid=CjwKCAjwlbr8BRA0EiwAnt4MTqfNj-_xTHZTJtJz0fV3ILq15mDxllmU3gpPm09F-EIUx45k1y2afBoCrvYQAvD_BwE&room1=A,A,;</a>
+<p>
+<img src="https://media-cdn.tripadvisor.com/media/photo-s/05/de/b5/4d/biarritz-hotel.jpg" widht="60%" height="60%" layout_gravity="center">
+<p>
+<iframe src="https://www.google.com/maps/embed?pb=!4v1603193129943!6m8!1m7!1sN6Sy_tPk44p9vYbnvi3pIw!2m2!1d38.99690170554623!2d-0.1591865923370429!3f185.20904437292847!4f9.633379669534335!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>]]></description>
+			<TimeStamp><when>2018-10-04T14:57:52Z</when>
+</TimeStamp>
+			<styleUrl>#msn_play</styleUrl>
+			<Point>
+				<coordinates>-0.15947,38.996741,-3.09</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Varadero</name>
+			<description><![CDATA[<big><b>VARADERO</b></big>
+<p>
+<p>
+<small>Esto es un Varadero</small>
+<p>
+<a href="https://www.lagranmanzana.com/gandia/playa-varadero">https://www.lagranmanzana.com/gandia/playa-varadero</a>
+<p>
+<img src="https://www.lagranmanzana.com/images/videos/playa-varadero-spot.jpg" widht="60%" height="60%" layout_gravity="center">
+<p>
+<iframe src="https://www.google.com/maps/embed?pb=!4v1603193301614!6m8!1m7!1sFt4CR6omhBrprjbgp9I-fg!2m2!1d38.99521669228266!2d-0.1591150314872021!3f286.29021316460023!4f-7.0181717006840785!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>]]></description>
+			<TimeStamp><when>2018-10-04T15:06:02Z</when>
+</TimeStamp>
+			<styleUrl>#msn_heliport</styleUrl>
+			<Point>
+				<coordinates>-0.159105,38.995201,-0.17</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+	<Placemark>
+		<name>Ruta Carlos Canut</name>
+		<description>Ruta creada por Carlos Canut</description>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<LineString>
+			<tessellate>1</tessellate>
+			<coordinates>
+				-0.1661491210898347,38.99549136430316,0 -0.1635294369570939,38.99496967892554,0 -0.1619120341471403,38.99558921326364,0 -0.1610040789431988,38.99439153891208,0 -0.1590063412635068,38.99523178144585,0 -0.1599686928439714,38.99652329099955,0 -0.1590774818642671,38.99694979022681,0 -0.1597467679360609,38.99794278061583,0 -0.161397983596504,38.99709270836384,0 -0.1616324461948904,38.99740265810573,0 -0.1616953770978091,38.99730960970918,0 -0.161525082441023,38.99701753427453,0 -0.1624983170083993,38.99659439435305,0 -0.1618894400904647,38.99572436876043,0 -0.1634029763081413,38.99495204916454,0 -0.1661566904958667,38.9954149702393,0 
+			</coordinates>
+		</LineString>
+	</Placemark>
+	<gx:Tour>
+		<name>Visita guiada carlos canut</name>
+		<description>Ruta guiada creada por Carlos Canut</description>
+		<gx:Playlist>
+			<gx:FlyTo>
+				<gx:duration>10</gx:duration>
+				<LookAt>
+					<longitude>-0.1661491210898347</longitude>
+					<latitude>38.99549136430316</latitude>
+					<altitude>0</altitude>
+					<heading>104.3709335327148</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1638991351762218</longitude>
+					<latitude>38.99504330083768</latitude>
+					<altitude>0</altitude>
+					<heading>74.19495391845703</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1618413609824042</longitude>
+					<latitude>38.99549598902043</latitude>
+					<altitude>0</altitude>
+					<heading>119.194953918457</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1604075511933726</longitude>
+					<latitude>38.99464243671166</latitude>
+					<altitude>0</altitude>
+					<heading>74.19495391845703</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1593734471118064</longitude>
+					<latitude>38.9957244503622</latitude>
+					<altitude>0</altitude>
+					<heading>29.19495391845703</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1591205386100202</longitude>
+					<latitude>38.99701367163196</latitude>
+					<altitude>0</altitude>
+					<heading>344.1949462890625</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3.000000000000001</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1605621673816235</longitude>
+					<latitude>38.99752299992966</latitude>
+					<altitude>0</altitude>
+					<heading>299.1949462890625</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3.000000000000001</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1617989889530349</longitude>
+					<latitude>38.99689844604661</latitude>
+					<altitude>0</altitude>
+					<heading>254.1949462890625</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3.000000000000001</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1620997072145638</longitude>
+					<latitude>38.99561707471725</latitude>
+					<altitude>0</altitude>
+					<heading>251.3084716796875</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>3.000000000000001</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1641507507539673</longitude>
+					<latitude>38.99507775594692</latitude>
+					<altitude>0</altitude>
+					<heading>282.2056884765625</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+			<gx:FlyTo>
+				<gx:duration>2.651003276322463</gx:duration>
+				<gx:flyToMode>smooth</gx:flyToMode>
+				<LookAt>
+					<longitude>-0.1661566904958667</longitude>
+					<latitude>38.9954149702393</latitude>
+					<altitude>0</altitude>
+					<heading>282.2056884765625</heading>
+					<tilt>60</tilt>
+					<range>100</range>
+				</LookAt>
+			</gx:FlyTo>
+		</gx:Playlist>
+	</gx:Tour>
+</Document>
+</kml>
