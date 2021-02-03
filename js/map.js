@@ -17,7 +17,7 @@ function initMap() {
         center: [40.538467, -3.8532],
         zoom: 6,
         zoomControl: false, 
-        layers: [mapStyle.streets] 
+        layers: [mapStyle.terrain] 
     });
 
     L.control.scale().addTo(mymap);
@@ -27,10 +27,10 @@ function initMap() {
     baseMaps = [{
         groupName: "Mapas base",
         layers: {
+            "Terreno": mapStyle.terrain,
             "Calles": mapStyle.streets,
             "Topográfico": mapStyle.topographic,
-            "España IGN base": mapStyle.spainIGN,
-            "Terreno": mapStyle.terrain
+            "España IGN base": mapStyle.spainIGN
         },
         expanded: true
     }];
