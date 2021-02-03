@@ -12,8 +12,14 @@ const layerGroups = {
     }, 
     rain: {
         name: `Precipitaciones del 2019`,
-        scale: ['ff0000', 'ff5900', 'ff9200', 'ffcb00', 'ffff00', 'deff52', 'b5ff8c', '84ffc6', '00ffff', '31c3ff', '3982ff', '314dff', '0000ff'].reverse(),
+        scale: ['E3F2FD', 'BBDEFB', '90CAF9', '64B5F6', '42A5F5', '2196F3', '1E88E5', '1976D2', '1565C0', '0D47A1'],
         preHtml: `<h6>Lluvias</h6>&nbsp;`,
+        postHtml: ``
+    },
+    isobaras: {
+        name: `Isobaras del tiempo 2019`,
+        style: isobarasCSS,
+        preHtml: `<h6>Isobaras del tiempo</h6>&nbsp;`,
         postHtml: ``
     }
 }
@@ -87,6 +93,27 @@ function readTifLayers(url, name, info, showInfo) {
                 }
             });
         }
+        
+        if (name.includes("Precipitaciones")) {
+            tifLayer.legend = function () {
+
+                var div = L.DomUtil.create('div', 'info legend');
+                div.addEventListener("scroll", function (e) {
+                    e.preventDefault();
+                });
+                div.innerHTML = `
+                <h6>Precipitaciones:</h6>
+                <div style="box-sizing: border-box;">
+                <i style="background:#bfdeff"></i> <p>Muy bajo</p>
+                <i style="background:#5badff"></i> <p>Bajo</p>
+                <i style="background:#007fff"></i> <p>Medio</p>
+                <i style="background:#003fff"></i> <p>Alto</p>
+                <i style="background:#0000ff"></i> <p>Muy alto</p>
+                </div>
+                `;
+                return div;
+            };
+        }
 
         // Cargamos capa
         control.addOverlay(tifLayer, name, { groupName: info.name, expanded: true });
@@ -127,5 +154,9 @@ function patricovaCSS(feature) {
         case "Alto": return { ...style, fillColor: "#003fff" };
         case "Muy alto": return { ...style, fillColor: "#0000ff" };
     }
+}
+
+function isobarasCSS(feature) {
+
 }
 
